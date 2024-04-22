@@ -1,149 +1,173 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+/*  General  */
+
+/* Tipo De Letra  */
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
 }
 
-a {
-  color: #149ddd;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #37b3ed;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
-}
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
+/* Config Circulo back-to-top  */
 .back-to-top {
-  position: fixed;
-  visibility: hidden;
+  /* Fixed sirve para que permanezca en la misma pos, sin importar si sube o baja*/
+  position:fixed;
+  /* Sirve para ocultarlo hasta que baje la pantalla*/
   opacity: 0;
+  /* Que tan a la derecha o izquiera/ arriba o abajo quiero que este*/
   right: 15px;
   bottom: 15px;
-  z-index: 996;
-  background: #149ddd;
+  background: #1f5297;
+  /* Tamaño círculo flecha */
   width: 40px;
   height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
+  /* Que tan circular es */
+  border-radius: 20px;
+/* Cuanto tarda en aparecer */
+  transition: 0.5s;
 }
 
+/* Config Flechita Back To Top */
 .back-to-top i {
-  font-size: 28px;
+  /* Tamaño */
+  font-size: 30px;
+  /* Color */
   color: #fff;
-  line-height: 0;
 }
 
+/* :hover hace accion cuando el mouse esta Encima*/
 .back-to-top:hover {
-  background: #2eafec;
-  color: #fff;
+  background: #040b14;
 }
 
+/* Cuando vaya para abajo accione */
 .back-to-top.active {
-  visibility: visible;
+  /* Lo hace visible */
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* Header */
+
+/* Esta es la config de la barra de la izquierda */
 #header {
+  /*  hace que siempre aparezca donde esta aunque suban o bajen*/
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  /* Posición de la barra */
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  /* Tamaño de la barra */
   width: 300px;
-  transition: all ease-in-out 0.5s;
-  z-index: 9997;
-  transition: all 0.5s;
-  padding: 0 15px;
-  background: #040b14;
-  overflow-y: auto;
+  /* Para que tenga prioridad y no se interpongan configs de otros */
+  z-index: 2;
+  /*Ubicacion de iconos y palabras(0px altura 15px ancho)*/
+  padding: 0px 15px;
+  /* Color Fondo */
+  background: #050d18;
 }
 
+/* Imagen Barra de la izquierda */
 #header .profile img {
-  margin: 15px auto;
+  /* Ubicación */
+  margin: 30px 60px;
+  /* Maxima ocupacion posible*/
   display: block;
-  width: 120px;
-  border: 8px solid #2c2f3f;
+  /* Tamaño Imagen */
+  width: 150px;
+  /* Borde */
+  border: 8px solid #333;
 }
 
+/* Config Titulo(Tomas Korzusehec)*/
 #header .profile h1 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
+  /* Tamaño*/
+  font-size: 25px;
+  /*Ubicacion*/
+  margin: 0px;
+  padding: 0px;
+  /* Grosor */
+  font-weight: 700;
+  /* Centrar */
+  text-align-last:center;
+  /* Fuente */
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a,
+/*Personalización Titulo color*/
+#header .profile h1 a
+{
+  color: #fff;
+  text-decoration: none;
+}
+/* Idem arriba(solo cuando el mouse esta arriba) */
 #header .profile h1 a:hover {
-  color: #fff;
-  text-decoration: none;
+  color: #122f57;
+  text-decoration:none;
 }
 
+
+/* Config Social Links */
 #header .profile .social-links a {
+  /* Tamaño iconos */
   font-size: 18px;
-  display: inline-block;
-  background: #212431;
+  /* Para que este uno seguido del otro y en línea */
+  display:inline-block;
+  /* color fondo */
+  background: #333;
+  /* Color icono */
   color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+  /* Altura Iconos */
+  line-height: 0px;
+  /* ajuste icon Altura y Ancho */
+  padding: 8px 0px;
+  /* Margen entre cada icono */
+  margin-right: 10px;
+  /*Circularidad borde*/
+  border-radius: 20px;
+  /*Tamaño borde Ancho y Altura*/
+  width: 38px;
+  height: 38px;
+  /* Transición */
+  transition: 0.5s;
 }
 
+/*Idem arriba(Solo cuando esta el mouse*/
 #header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-  text-decoration: none;
+  background: #1f5297;
+  color: #111;
 }
 
+/* MARGEN del About, educacion, exp... para correr hacia la derecha y que se vea */
 #main {
   margin-left: 300px;
 }
 
-.container,
+/* Margen del Margen main */
+.container, 
 .container-fluid {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
+/* Vista Dispositivos tablet o movil */
 @media (max-width: 1199px) {
+  /* Hago desaparecer el nav */
   #header {
     left: -300px;
   }
 
   #main {
-    margin-left: 0;
+    margin-left: 0px;
+  }
+
+  /* Titulo imagen(Lo centro) */
+  .tomas-container{
+    left: -300px;
+    
   }
 
   .container,
@@ -153,36 +177,34 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+/* Navigation Menu */
+
+/* Navegación Escritorio (Inicio, sobre mi, etc)*/
 .nav-menu {
   padding: 30px 0 0 0;
 }
 
 .nav-menu * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 3px;
   list-style: none;
 }
 
-.nav-menu>ul>li {
-  position: relative;
-  white-space: nowrap;
-}
 
+
+/* Enlaces Navegador(Sobre Mi, Educación, etc) */
 .nav-menu a,
 .nav-menu a:focus {
   display: flex;
   align-items: center;
   color: #a8a9b4;
   padding: 12px 15px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   transition: 0.3s;
   font-size: 15px;
 }
 
+/* Iconos navegador */
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 24px;
@@ -190,6 +212,7 @@ h6 {
   color: #6f7180;
 }
 
+/* Iconos navegador color letra_(mouse arriba) */
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
@@ -198,11 +221,12 @@ h6 {
   color: #fff;
 }
 
+/* Iconos navegador color icono_(mouse arriba) */
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #1f5297;
 }
 
 /* Mobile Navigation */
@@ -210,12 +234,12 @@ h6 {
   position: fixed;
   right: 15px;
   top: 15px;
-  z-index: 9998;
+  z-index: 10000;
   border: 0;
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: #1f5297;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -227,6 +251,26 @@ h6 {
   cursor: pointer;
 }
 
+/* Icono de Cruz en nav */
+.bi-x-circle-fill::before { content: "\f622"; }
+.bi-x-circle::before { content: "\f623"; }
+.bi-x-diamond-fill::before { content: "\f624"; }
+.bi-x-diamond::before { content: "\f625"; }
+.bi-x-octagon-fill::before { content: "\f626"; }
+.bi-x-octagon::before { content: "\f627"; }
+.bi-x-square-fill::before { content: "\f628"; }
+.bi-x-square::before { content: "\f629"; }
+.bi-x::before { content: "\f62a"; }
+
+/* ICono de lista en nav */
+.bi-list-check::before { content: "\f473"; }
+.bi-list-nested::before { content: "\f474"; }
+.bi-list-ol::before { content: "\f475"; }
+.bi-list-stars::before { content: "\f476"; }
+.bi-list-task::before { content: "\f477"; }
+.bi-list-ul::before { content: "\f478"; }
+.bi-list::before { content: "\f479"; }
+
 .mobile-nav-active {
   overflow: hidden;
 }
@@ -234,6 +278,8 @@ h6 {
 .mobile-nav-active #header {
   left: 0;
 }
+
+/*HASTA ACA CORRECCION*/
 
 /*--------------------------------------------------------------
 # tomas Section
