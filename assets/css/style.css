@@ -97,6 +97,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
 /*Personalización Titulo color*/
 #header .profile h1 a
 {
@@ -110,6 +111,7 @@ body {
 }
 
 
+/* Bueno*/
 /* Config Social Links */
 #header .profile .social-links a {
   /* Tamaño iconos */
@@ -271,100 +273,81 @@ body {
 .bi-list-ul::before { content: "\f478"; }
 .bi-list::before { content: "\f479"; }
 
+/* Oculta cualquier cosa que desborde del header */
 .mobile-nav-active {
   overflow: hidden;
 }
 
+/* Hace que aparezca el nav en el margen izquierdo */
 .mobile-nav-active #header {
-  left: 0;
+  left: 0px;
 }
 
 /*HASTA ACA CORRECCION*/ 
-
-/* x2*/
-
-/* x3*/
 
 /*--------------------------------------------------------------
 # tomas Section
 --------------------------------------------------------------*/
 #tomas {
+  /* Pone el ancho y alto al 100% */
   width: 100%;
   height: 100vh;
+  /* Centra la imágen en modo celu */
   background: url("../img/FotoYo.jpeg") top center;
+  /* La imagen cubrirá todo el contenedor */
   background-size: cover;
 }
 
+/* Sombreado imagen*/
 #tomas:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  /* Se pone rgba para que haya transparencia */
+  background: rgba(29, 29, 29, 0.3);
+  /* Solo cubre la imagen */
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
+  /*Altura y ancho*/
+  width: 100%;
+  height: 100vh;
 }
 
+/*Ubicación h1 "TomasKorzusehec"*/
 #tomas .tomas-container {
+  
   position: relative;
-  z-index: 2;
   min-width: 300px;
   margin-top: -250px;
   margin-left: 550px;
 }
 
+/*Tamaño h1 "TomasKorzusehec"*/
 #tomas h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: px;
   color: #fff;
 }
 
-#tomas p {
-  color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
-}
-
-#tomas p span {
-  color: #fff;
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
-}
-
-@media (min-width: 1024px) {
-  #tomas {
-    background-attachment: fixed;
+/* Tamaño h1 TomasKorzusehec cuando se entra a pantalla donde no esta el nav */
+@media (max-width: 1199px) {
+  #tomas h1{
+    
+      font-size: 28px;
+      line-height: 36px;
   }
 }
 
-@media (max-width: 768px) {
-  #tomas h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  #tomas h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: rgba(14, 57, 75, 0.3);
 }
 
 .section-title {
@@ -386,7 +369,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #1f5297;
   bottom: 0;
   left: 0;
 }
@@ -1127,36 +1110,79 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  padding: 15px;
-  color: #f4f6fd;
+  margin-left: 300px;
+  background: url("../img/FotoYo.jpeg") top center no-repeat;
+  background-size: cover;
+  color: #fff;
   font-size: 14px;
-  position: fixed;
+  text-align: center;
+  padding: 80px 0;
+  position: relative;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
   left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
-  width: 300px;
-  z-index: 9999;
-  background: #040b14;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-#footer .copyright {
-  text-align: center;
+#footer .container {
+  position: relative;
 }
 
-#footer .credits {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
+/*Personalización Titulo color*/
+#footer h3 a{
+  right: 100px;
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: px;
+  color: #fff;
+  text-decoration:none;
 }
 
-@media (max-width: 1199px) {
-  #footer {
-    position: static;
-    width: auto;
-    padding-right: 20px 15px;
-  }
+#footer h3 a:hover{
+  color: #122f57;
+  text-decoration:none;
 }
 
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+
+/*bueno*/
+#footer .social-links a {
+  /* Tamaño iconos */
+  font-size: 18px;
+  /* Para que este uno seguido del otro y en línea */
+  display:inline-block;
+  /* color fondo */
+  background: #333;
+  /* Color icono */
+  color: #fff;
+  /* Altura Iconos */
+  line-height: 0px;
+  /* ajuste icon Altura y Ancho */
+  padding: 8px 0px;
+  /* Margen entre cada icono */
+  margin-right: 10px;
+  /*Circularidad borde*/
+  border-radius: 20px;
+  /*Tamaño borde Ancho y Altura*/
+  width: 38px;
+  height: 38px;
+  /* Transición */
+  transition: 0.5s;
+}
+
+#footer .social-links a:hover {
+  background: #1f5297;
+  color: #111;
+}
 
 
 /* extras */
