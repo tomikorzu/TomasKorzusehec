@@ -302,7 +302,7 @@ body {
 #tomas:before {
   content: "";
   /* Se pone rgba para que haya transparencia */
-  background: rgba(29, 29, 29, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   /* Solo cubre la imagen */
   position: absolute;
   /*Altura y ancho*/
@@ -1109,8 +1109,10 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+
+
 #footer {
-  margin-left: 300px;
   background: url("../img/FotoYo.jpeg") top center no-repeat;
   background-size: cover;
   color: #fff;
