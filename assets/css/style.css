@@ -293,7 +293,7 @@ body {
   width: 100%;
   height: 100vh;
   /* Centra la imágen en modo celu */
-  background: url("../img/FotoYo.jpeg") top center;
+  background: url("../img/yo10.jpeg") top center;
   /* La imagen cubrirá todo el contenedor */
   background-size: cover;
 }
