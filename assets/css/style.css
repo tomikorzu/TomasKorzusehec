@@ -143,6 +143,20 @@ body {
   color: #111;
 }
 
+/* Transicion navbar */
+/* Establece la posición inicial fuera de la pantalla */
+#header {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Mueve la barra fuera de la pantalla */
+  transition: left 0.5s ease; /* Agrega una transición suave */
+}
+
+/* Cuando se activa el menú móvil, mueve la barra hacia la pantalla */
+.mobile-nav-active #header {
+  left: 0;
+}
+
 /* MARGEN del About, educacion, exp... para correr hacia la derecha y que se vea */
 #main {
   margin-left: 300px;
@@ -155,20 +169,17 @@ body {
   padding-right: 50px;
 }
 
+@media (min-width: 1199px) {
+  #header{
+    left:0px
+  }
+}
+
 /* Vista Dispositivos tablet o movil */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   /* Hago desaparecer el nav */
   #header {
-    height: 100vh;
-    width: 100%;
-  }
-
-  #header nav{
-    margin-left: 50px;
-  }
-
-  #header nav ul{
-    font-size: 100px;
+    left: -300px;
   }
 
   #main {
@@ -177,7 +188,7 @@ body {
 
   /* Titulo imagen(Lo centro) */
   .tomas-container{
-    left: -220px;
+    left: -300px;
     
   }
 
@@ -193,37 +204,6 @@ body {
 /* Navegación Escritorio (Inicio, sobre mi, etc)*/
 .nav-menu {
   padding: 30px 0 0 0;
-}
-
-@media (max-width:1199px){
-  .nav-menu{
-    padding: 25px 0 0px 10px;
-  }
-  .nav-menu ul a,
-  .nav-menu ul a i {
-    font-size: 23px;
-    margin: 10px;
-  }
-
-#header .profile{
-  margin: 0px 0px 0px 0px;
-}
-
-#header .profile img{
-  margin-left: 105px ;
-}
-
-div .profile{
-  margin-left: 50px;
-}
-
-.profile h1 a{
-  font-size: 32px;
-}
-
-#header .profile .social-links a{
-  margin-left: 5px;
-}
 }
 
 
@@ -319,10 +299,7 @@ div .profile{
   overflow: hidden;
 }
 
-/* Hace que aparezca el nav en el margen izquierdo */
-.mobile-nav-active #header {
-  left: 0px;
-}
+
 
 /*HASTA ACA CORRECCION*/ 
 

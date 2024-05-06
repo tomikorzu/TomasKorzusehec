@@ -100,6 +100,14 @@
       this.classList.toggle('bi-x')
     })
 
+    
+    /* Transicion navbar */ 
+    const body = document.body;
+    
+    mobileNavToggle.addEventListener('click', function() {
+      body.classList.toggle('mobile-nav-active');
+    });
+
   // Obtener referencias a los elementos
 const mobileNavToggle = document.getElementById('mobileNavToggle');
 const tomasContainer = document.querySelector('.tomas-container');
