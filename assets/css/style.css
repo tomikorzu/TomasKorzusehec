@@ -156,10 +156,19 @@ body {
 }
 
 /* Vista Dispositivos tablet o movil */
-@media (max-width: 1199px) {
+@media (max-width: 768px) {
   /* Hago desaparecer el nav */
   #header {
-    left: -300px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #header nav{
+    margin-left: 50px;
+  }
+
+  #header nav ul{
+    font-size: 100px;
   }
 
   #main {
@@ -168,7 +177,7 @@ body {
 
   /* Titulo imagen(Lo centro) */
   .tomas-container{
-    left: -300px;
+    left: -220px;
     
   }
 
@@ -185,6 +194,38 @@ body {
 .nav-menu {
   padding: 30px 0 0 0;
 }
+
+@media (max-width:1199px){
+  .nav-menu{
+    padding: 25px 0 0px 10px;
+  }
+  .nav-menu ul a,
+  .nav-menu ul a i {
+    font-size: 23px;
+    margin: 10px;
+  }
+
+#header .profile{
+  margin: 0px 0px 0px 0px;
+}
+
+#header .profile img{
+  margin-left: 105px ;
+}
+
+div .profile{
+  margin-left: 50px;
+}
+
+.profile h1 a{
+  font-size: 32px;
+}
+
+#header .profile .social-links a{
+  margin-left: 5px;
+}
+}
+
 
 .nav-menu * {
   margin: 0px;
@@ -293,7 +334,7 @@ body {
   width: 100%;
   height: 100vh;
   /* Centra la imágen en modo celu */
-  background: url("../img/yo10.jpeg") top center;
+  background: url("../img/Foto-tk.jpeg") top center;
   /* La imagen cubrirá todo el contenedor */
   background-size: cover;
 }
